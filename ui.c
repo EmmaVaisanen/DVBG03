@@ -49,7 +49,24 @@ static void ui_menu()
 		"Menu",
 		"Exit\n",
 		"Bubble sort best case",
-		// TODO: complete menu
+		"Bubble sort worst case",
+		"Bubble sort average case\n",
+
+		"Insertion sort best case",
+		"Insertion sort worst case",
+		"Insertion sort average case\n",
+
+		"Quick sort best case",
+		"Quick sort worst case",
+		"Quick sort average case\n",
+
+		"Linear search best case",
+		"Linear search worst case",
+		"Linear search average case\n",
+
+		"Binary search best case",
+		"Binary search worst case",
+		"Binary search average case\n",		
 	};
 
 	ui_line('=', MENU_WIDTH);
@@ -87,39 +104,60 @@ void ui_run()
 				printf("Enter b to exit\n");
 				break;
 			case 'd':
-			break;
-			
+				benchmark(bubble_sort_t, worst_t, result, RESULT_ROWS);
+			break;	
 			case 'e':
+				benchmark(bubble_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 
+			// Insertion sort
 			case 'f':
+				benchmark(insertion_sort_t, best_t, result, RESULT_ROWS);
 				break;
 
 			case 'g':
+				benchmark(insertion_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 
 			case 'h':
+				benchmark(insertion_sort_t, average_t, result, RESULT_ROWS);
 				break;
 
+			// Quick sort
 			case 'i':
+				benchmark(bubble_sort_t, best_t, result, RESULT_ROWS);
 				break;
 
 			case 'j':
+				benchmark(bubble_sort_t, worst_t, result, RESULT_ROWS);
 				break;
 
 			case 'k':
+				benchmark(bubble_sort_t, average_t, result, RESULT_ROWS);
 				break;
+			
+			//	Linear search
 			case 'l':
+				benchmark(linear_search_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'm':
+				benchmark(linear_search_t, worst_t, result, RESULT_ROWS);
 				break;
 			case 'n':
+				benchmark(linear_search_t, average_t, result, RESULT_ROWS);
 				break;
+
+			//	Binary search	
 			case 'o':
+				benchmark(binary_search_t, best_t, result, RESULT_ROWS);
 				break;
 			case 'p':
+				benchmark(binary_search_t, worst_t, result, RESULT_ROWS);
 				break;
-				
+			case 'q':
+				benchmark(binary_search_t, average_t, result, RESULT_ROWS);
+				break;
+
 			// Invalid input
 			default:
 				show_menu = false;
