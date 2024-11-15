@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/R3D1ce/Desktop/programmering/DVGB03/lab1-perf",
+      "program": "/Users/R3D1ce/Desktop/programmering/DVGB03/lab1-perf/build/Debug/outDebug"
+    }
+  ]
+}
